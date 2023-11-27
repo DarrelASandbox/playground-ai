@@ -26,9 +26,9 @@ pip install python-dotenv
 conda list
 
 # Parsing Command Line Argument
-python main.py
-python main.py --language javascript --task 'print hello world'
-python main.py --language javascript --task 'return a list of numbers'
+python 01_pycode.py
+python 01_pycode.py --language javascript --task 'print hello world'
+python 01_pycode.py --language javascript --task 'return a list of numbers'
 ```
 
 &nbsp;
