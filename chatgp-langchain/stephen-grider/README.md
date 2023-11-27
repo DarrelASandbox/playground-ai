@@ -22,11 +22,13 @@
 conda create --name langchainenv -c conda-forge langchain
 conda activate langchainenv
 pip install 'openai<1.0.0'
+pip install python-dotenv
 conda list
 
 # Parsing Command Line Argument
 python main.py
 python main.py --language javascript --task 'print hello world'
+python main.py --language javascript --task 'return a list of numbers'
 ```
 
 &nbsp;

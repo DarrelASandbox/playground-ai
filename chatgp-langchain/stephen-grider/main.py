@@ -1,17 +1,19 @@
 import argparse
 
+from dotenv import load_dotenv
 from langchain.chains import LLMChain
 from langchain.llms.openai import OpenAI
 from langchain.prompts import PromptTemplate
 
-API_KEY = ""
+
+load_dotenv()
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--task", default="return a list of numbers")
 parser.add_argument("--language", default="python")
 args = parser.parse_args()
 
-llm = OpenAI(openai_api_key=API_KEY)
+llm = OpenAI()
 
 code_prompt = PromptTemplate(
     template="Write a short {language} function that will {task}",
