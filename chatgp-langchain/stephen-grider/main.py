@@ -1,8 +1,15 @@
+import argparse
+
+from langchain.chains import LLMChain
 from langchain.llms.openai import OpenAI
 from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
 
 API_KEY = ""
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--task", default="return a list of numbers")
+parser.add_argument("--language", default="python")
+args = parser.parse_args()
 
 llm = OpenAI(openai_api_key=API_KEY)
 
@@ -13,5 +20,5 @@ code_prompt = PromptTemplate(
 
 code_chain = LLMChain(llm=llm, prompt=code_prompt)
 
-result = code_chain({"language": "python", "task": "return a list of numbers"})
+result = code_chain({"language": args.language, "task": args.task})
 print(result)

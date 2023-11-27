@@ -18,11 +18,15 @@
 - [openai api key](https://platform.openai.com/api-keys)
 - [pdf.ai](https://pdf.ai/)
 
-```
+```sh
 conda create --name langchainenv -c conda-forge langchain
 conda activate langchainenv
 pip install 'openai<1.0.0'
 conda list
+
+# Parsing Command Line Argument
+python main.py
+python main.py --language javascript --task 'print hello world'
 ```
 
 &nbsp;
