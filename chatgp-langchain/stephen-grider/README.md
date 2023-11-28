@@ -35,6 +35,7 @@ python 01_pycode.py --language javascript --task 'return a list of numbers'
 # Chat Chain
 python 02_tchat.py
 What is 1+1?
+and 3 more?
 ```
 
 &nbsp;
