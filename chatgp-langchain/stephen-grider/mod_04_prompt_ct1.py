@@ -39,6 +39,7 @@ db = Chroma(persist_directory="emb", embedding_function=embeddings)
 retriever = db.as_retriever()
 
 # Configure the RetrievalQA chain with the chat model and the retriever.
+# https://python.langchain.com/docs/modules/chains/document/
 chain = RetrievalQA.from_chain_type(llm=chat, retriever=retriever, chain_type="stuff")
 
 # Run the chain to answer a question based on retrieved content.
