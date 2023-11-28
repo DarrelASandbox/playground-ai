@@ -1,5 +1,5 @@
 - [About The Project](#about-the-project)
-- [Introduction](#introduction)
+- [Links](#links)
 - [CLI](#cli)
 - [LangChain](#langchain)
 - [Models](#models)
@@ -15,21 +15,21 @@
 
 &nbsp;
 
-# Introduction
+# Links
 
 - [pdf.ai](https://pdf.ai/)
 - [langchain](https://github.com/langchain-ai/langchain)
 - [python.langchain docs](https://python.langchain.com/docs/get_started/quickstart)
 - [openai api key](https://platform.openai.com/api-keys)
+- [chromaDB](https://github.com/chroma-core/chroma)
 
 # CLI
 
 ```sh
-conda create --name langchainenv -c conda-forge langchain
+conda create --name langchainenv -c conda-forge langchain openai python-dotenv tiktoken chromadb
 conda activate langchainenv
-pip install 'openai<1.0.0'
-pip install python-dotenv
 conda list
+
 
 # Parsing Command Line Argument
 python mod_01_pycode.py
