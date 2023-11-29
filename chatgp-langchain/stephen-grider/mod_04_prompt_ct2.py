@@ -18,11 +18,14 @@ Run the script to ask a question about the English language and get an answer ba
 retrieved content from the Chroma database.
 """
 
+import langchain
 from dotenv import load_dotenv
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores.chroma import Chroma
+
+langchain.debug = True
 
 load_dotenv()
 
@@ -40,7 +43,9 @@ retriever = db.as_retriever()
 
 # Configure the RetrievalQA chain with the chat model and the retriever.
 # https://python.langchain.com/docs/modules/chains/document/
-chain = RetrievalQA.from_chain_type(llm=chat, retriever=retriever, chain_type="stuff")
+chain = RetrievalQA.from_chain_type(
+    llm=chat, retriever=retriever, chain_type="map_reduce"
+)
 
 # Run the chain to answer a question based on retrieved content.
 result = chain.run("What is an interesting fact about the English language?")
