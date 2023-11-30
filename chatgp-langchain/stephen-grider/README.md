@@ -44,6 +44,12 @@ and 3 more?
 
 # Document Loaders
 python mod_04_facts.py
+
+# Custom Retriever in Action
+python mod_05_prompt
+
+# For `scores.ipynb`
+conda install ipykernel
 ```
 
 # env
