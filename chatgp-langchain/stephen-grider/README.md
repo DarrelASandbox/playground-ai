@@ -50,6 +50,9 @@ python mod_05_prompt
 
 # For `scores.ipynb`
 conda install ipykernel
+
+# ChatGPT Functions
+python mod_06_tools_agents.py
 ```
 
 # env
