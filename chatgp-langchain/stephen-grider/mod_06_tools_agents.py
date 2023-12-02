@@ -23,4 +23,9 @@ tools = [run_query_tool]
 
 agent = OpenAIFunctionsAgent(llm=chat, prompt=prompt, tools=[run_query_tool])
 agent_executor = AgentExecutor(agent=agent, verbose=True, tools=tools)
-agent_executor("How many users are in the database?")
+# agent_executor("How many users are in the database?")
+
+# sqlite3.OperationalError: no such column: shipping_address
+# Invoking: `run_sqlite_query` with `{'query': 'SELECT COUNT(*) FROM users
+# WHERE shipping_address IS NOT NULL;'}`
+agent_executor("How many users have provided a shipping address?")
