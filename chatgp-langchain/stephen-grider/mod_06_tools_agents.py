@@ -7,7 +7,7 @@ from langchain.prompts import (
     MessagesPlaceholder,
 )
 from langchain.schema import SystemMessage
-from tools.sql import list_tables, run_query_tool
+from tools.sql import describe_tables_tool, list_tables, run_query_tool
 
 load_dotenv()
 
@@ -25,19 +25,8 @@ prompt = ChatPromptTemplate(
     ]
 )
 
-tools = [run_query_tool]
+tools = [run_query_tool, describe_tables_tool]
 
-agent = OpenAIFunctionsAgent(llm=chat, prompt=prompt, tools=[run_query_tool])
+agent = OpenAIFunctionsAgent(llm=chat, prompt=prompt, tools=tools)
 agent_executor = AgentExecutor(agent=agent, verbose=True, tools=tools)
-# agent_executor("How many users are in the database?")
-
-# Invoking: `run_sqlite_query` with `SELECT COUNT(DISTINCT user_id) FROM users
-# WHERE address IS NOT NULL`
-# The following error occurred: no such column: user_id
-# Invoking: `run_sqlite_query` with `SELECT COUNT(DISTINCT user_id) FROM orders
-# WHERE shipping_address IS NOT NULL
-# The following error occurred: no such column: shipping_address
-# I apologize for the confusion. It seems that the column names I used in the query are incorrect.
-# Could you please provide me with the correct column names for the user table
-# and the shipping address column?
 agent_executor("How many users have provided a shipping address?")
