@@ -15,7 +15,8 @@ Function:
 - write_report: Writes HTML content to a file on disk.
 
 Class:
-- WriteReportArgsSchema: Pydantic model for validating arguments passed to the 'write_report' function.
+- WriteReportArgsSchema: Pydantic model for validating arguments passed to 
+                         the 'write_report' function.
 
 Usage:
 The 'write_report_tool' can be used in any system where there is a need to generate
@@ -30,8 +31,10 @@ def write_report(filename, html):
     """
     Writes HTML content to a file.
 
-    This function takes a filename and HTML content as input and writes the HTML content to the specified file.
-    It's designed to be used for generating and saving reports or any other HTML formatted documents.
+    This function takes a filename and HTML content as input and
+    writes the HTML content to the specified file.
+    It's designed to be used for generating and saving reports or
+    any other HTML formatted documents.
 
     Args:
         filename (str): The name of the file where the HTML content will be written.
