@@ -63,6 +63,11 @@ conda activate pdf-dist
 pip install -r pdf-dist/requirements.txt
 cd pdf-dist
 flask --app app.web init-db
+
+# local-do-files setup
+cd chatgp-langchain/stephen-grider
+conda activate pdf-dist
+pip install -r local-do-files/requirements.txt
 ```
 
 # env
