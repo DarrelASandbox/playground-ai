@@ -54,6 +54,15 @@ conda install ipykernel
 
 # ChatGPT Functions
 python mod_06_tools_agents.py
+
+# pdf-dist initial setup
+# Refer to README in pdf-dist
+cd chatgp-langchain/stephen-grider/
+conda create --name pdf-dist pip
+conda activate pdf-dist
+pip install -r pdf-dist/requirements.txt
+cd pdf-dist
+flask --app app.web init-db
 ```
 
 # env
