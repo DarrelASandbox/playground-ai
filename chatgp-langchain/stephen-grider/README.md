@@ -2,6 +2,8 @@
 - [Links](#links)
 - [CLI](#cli)
 - [env](#env)
+  - [langchainenv](#langchainenv)
+  - [pdf-dist](#pdf-dist)
 - [LangChain](#langchain)
 - [Models](#models)
 - [Semantic Search \& Embeddings](#semantic-search--embeddings)
@@ -71,6 +73,8 @@ pip install -r local-do-files/requirements.txt
 ```
 
 # env
+
+## langchainenv
 
 ```sh
 # packages in environment at /opt/homebrew/Caskroom/miniconda/base/envs/langchainenv:
@@ -318,6 +322,101 @@ yarl                      1.9.2           py311h05b510d_1    conda-forge
 zeromq                    4.3.4                hc377ac9_0
 zipp                      3.17.0             pyhd8ed1ab_0    conda-forge
 zstd                      1.5.5                h4f39d0f_0    conda-forge
+```
+
+## pdf-dist
+
+```sh
+# packages in environment at /opt/homebrew/Caskroom/miniconda/base/envs/pdf-dist:
+#
+# Name                    Version                   Build  Channel
+aiohttp                   3.9.1                    pypi_0    pypi
+aiosignal                 1.3.1                    pypi_0    pypi
+amqp                      5.2.0                    pypi_0    pypi
+anyio                     4.1.0                    pypi_0    pypi
+attrs                     23.1.0                   pypi_0    pypi
+backoff                   2.2.1                    pypi_0    pypi
+billiard                  4.2.0                    pypi_0    pypi
+blinker                   1.7.0                    pypi_0    pypi
+boto3                     1.26.122                 pypi_0    pypi
+botocore                  1.29.122                 pypi_0    pypi
+bzip2                     1.0.8                h620ffc9_4
+ca-certificates           2023.08.22           hca03da5_0
+celery                    5.3.1                    pypi_0    pypi
+certifi                   2023.11.17               pypi_0    pypi
+charset-normalizer        3.3.2                    pypi_0    pypi
+click                     8.1.7                    pypi_0    pypi
+click-didyoumean          0.3.0                    pypi_0    pypi
+click-plugins             1.1.1                    pypi_0    pypi
+click-repl                0.3.0                    pypi_0    pypi
+dataclasses-json          0.5.14                   pypi_0    pypi
+dnspython                 2.4.2                    pypi_0    pypi
+flask                     3.0.0                    pypi_0    pypi
+flask-cors                4.0.0                    pypi_0    pypi
+flask-sqlalchemy          3.0.3                    pypi_0    pypi
+frozenlist                1.4.0                    pypi_0    pypi
+h11                       0.14.0                   pypi_0    pypi
+httpcore                  0.17.3                   pypi_0    pypi
+httpx                     0.24.1                   pypi_0    pypi
+idna                      3.6                      pypi_0    pypi
+invoke                    2.2.0                    pypi_0    pypi
+itsdangerous              2.1.2                    pypi_0    pypi
+jinja2                    3.1.2                    pypi_0    pypi
+jmespath                  1.0.1                    pypi_0    pypi
+kombu                     5.3.4                    pypi_0    pypi
+langchain                 0.0.252                  pypi_0    pypi
+langfuse                  1.0.18                   pypi_0    pypi
+langsmith                 0.0.69                   pypi_0    pypi
+libffi                    3.4.4                hca03da5_0
+loguru                    0.7.2                    pypi_0    pypi
+markupsafe                2.1.3                    pypi_0    pypi
+marshmallow               3.20.1                   pypi_0    pypi
+multidict                 6.0.4                    pypi_0    pypi
+mypy-extensions           1.0.0                    pypi_0    pypi
+ncurses                   6.4                  h313beb8_0
+numexpr                   2.8.7                    pypi_0    pypi
+numpy                     1.26.2                   pypi_0    pypi
+openai                    0.27.8                   pypi_0    pypi
+openapi-schema-pydantic   1.2.4                    pypi_0    pypi
+openssl                   3.0.12               h1a28f6b_0
+packaging                 23.2                     pypi_0    pypi
+pinecone-client           2.2.2                    pypi_0    pypi
+pip                       23.3.1          py311hca03da5_0
+prompt-toolkit            3.0.41                   pypi_0    pypi
+pydantic                  1.10.13                  pypi_0    pypi
+pypdf                     3.15.4                   pypi_0    pypi
+python                    3.11.5               hb885b13_0
+python-dateutil           2.8.2                    pypi_0    pypi
+python-dotenv             1.0.0                    pypi_0    pypi
+pytz                      2023.3.post1             pypi_0    pypi
+pyyaml                    6.0.1                    pypi_0    pypi
+readline                  8.2                  h1a28f6b_0
+redis                     5.0.0                    pypi_0    pypi
+regex                     2023.10.3                pypi_0    pypi
+requests                  2.31.0                   pypi_0    pypi
+s3transfer                0.6.2                    pypi_0    pypi
+setuptools                68.0.0          py311hca03da5_0
+six                       1.16.0                   pypi_0    pypi
+sniffio                   1.3.0                    pypi_0    pypi
+sqlalchemy                2.0.23                   pypi_0    pypi
+sqlite                    3.41.2               h80987f9_0
+tenacity                  8.2.3                    pypi_0    pypi
+tiktoken                  0.4.0                    pypi_0    pypi
+tk                        8.6.12               hb8d0fd4_0
+tqdm                      4.66.1                   pypi_0    pypi
+typing-extensions         4.8.0                    pypi_0    pypi
+typing-inspect            0.9.0                    pypi_0    pypi
+tzdata                    2023.3                   pypi_0    pypi
+urllib3                   1.26.18                  pypi_0    pypi
+uuid                      1.30                     pypi_0    pypi
+vine                      5.1.0                    pypi_0    pypi
+watchdog                  3.0.0                    pypi_0    pypi
+wcwidth                   0.2.12                   pypi_0    pypi
+werkzeug                  3.0.1                    pypi_0    pypi
+wheel                     0.41.2          py311hca03da5_0
+xz                        5.4.5                h80987f9_0
+yarl                      1.9.3                    pypi_0    pypi
+zlib                      1.2.13               h5a0b063_0
 ```
 
 &nbsp;
