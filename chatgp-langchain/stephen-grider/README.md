@@ -5,6 +5,7 @@
   - [langchainenv](#langchainenv)
   - [pdf-dist](#pdf-dist)
 - [LangChain](#langchain)
+- [Pinecone](#pinecone)
 - [Models](#models)
 - [Semantic Search \& Embeddings](#semantic-search--embeddings)
 
@@ -486,6 +487,15 @@ Before tools like LangChain, developers and researchers working with Large Langu
    - Researchers and developers had to conduct their own experiments to understand the capabilities and limitations of LLMs in various applications, which could be a resource-intensive process.
 
 In essence, without tools like LangChain, the process of integrating and effectively utilizing LLMs in applications was more manual, required deeper expertise in the workings of these models, and often involved developing custom solutions for various aspects of the integration. LangChain and similar frameworks aim to simplify and streamline these processes, making it easier for a broader range of developers to leverage the power of LLMs in their applications.
+
+&nbsp;
+
+# Pinecone
+
+- [Pinecone](https://app.pinecone.io/)
+- **Create new index**
+  - **Name**: docs
+  - **Dimensions**: 1536 (OpenAI)
 
 &nbsp;
 
