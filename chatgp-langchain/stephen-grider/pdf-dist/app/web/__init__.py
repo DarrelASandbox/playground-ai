@@ -1,12 +1,14 @@
 from flask import Flask
 from flask_cors import CORS
 
-from app.web.db import db, init_db_command
-from app.web.db import models
-from app.celery import celery_init_app
-from app.web.config import Config
-from app.web.hooks import load_logged_in_user, handle_error, add_headers
-from app.web.views import (
+# Switched to relative imports
+# Refer to commit history for absolute imports
+from .db import db, init_db_command
+from .db import models
+from ..celery import celery_init_app
+from .config import Config
+from .hooks import load_logged_in_user, handle_error, add_headers
+from .views import (
     auth_views,
     pdf_views,
     score_views,
