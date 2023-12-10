@@ -71,6 +71,12 @@ flask --app app.web init-db
 cd chatgp-langchain/stephen-grider
 conda activate pdf-dist
 pip install -r local-do-files/requirements.txt
+
+# Running the servers
+redis-server
+inv dev        # pdf-dist
+inv devworker  # pdf-dist
+python app.py  # local-do-files
 ```
 
 # env
