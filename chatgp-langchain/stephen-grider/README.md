@@ -428,6 +428,12 @@ zlib                      1.2.13               h5a0b063_0
 
 &nbsp;
 
+- **Questions for testing the chain to use context** (Without streaming)
+  - What country produces the most spice?
+  - How much did they produce in metric tonnes?
+
+&nbsp;
+
 # LangChain
 
 LangChain is a library and framework designed to facilitate the development of applications that leverage Large Language Models (LLMs) like GPT-3 or GPT-4. It's particularly focused on making it easier to build applications that use these models for language understanding and generation tasks. Here are some key aspects of LangChain:
