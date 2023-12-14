@@ -4,6 +4,7 @@
 - [env](#env)
   - [langchainenv](#langchainenv)
   - [pdf-dist](#pdf-dist)
+    - [Questions for tests](#questions-for-tests)
 - [LangChain](#langchain)
 - [Pinecone](#pinecone)
 - [Models](#models)
@@ -426,11 +427,14 @@ yarl                      1.9.3                    pypi_0    pypi
 zlib                      1.2.13               h5a0b063_0
 ```
 
-&nbsp;
+### Questions for tests
 
-- **Questions for testing the chain to use context** (Without streaming)
+- **Testing the chain to use context** (Without streaming)
   - What country produces the most spice?
   - How much did they produce in metric tonnes?
+- **Testing the streaming setup**
+  - What country produces the most spice?
+  - What country is second?
 
 &nbsp;
 
