@@ -4,6 +4,7 @@
 - [env](#env)
   - [langchainenv](#langchainenv)
   - [pdf-dist](#pdf-dist)
+    - [IMPORTANT](#important)
     - [Questions for tests](#questions-for-tests)
 - [LangChain](#langchain)
 - [Pinecone](#pinecone)
@@ -426,6 +427,11 @@ xz                        5.4.5                h80987f9_0
 yarl                      1.9.3                    pypi_0    pypi
 zlib                      1.2.13               h5a0b063_0
 ```
+
+### IMPORTANT
+
+- **Open the `pdf-dist` directory directly in a new VS Code window instead of navigating into the directory from `playground-ai`.**
+- **This is so that pylint doesn't highlight errors when you are using the `pdf-dist` conda environment.**
 
 ### Questions for tests
 
