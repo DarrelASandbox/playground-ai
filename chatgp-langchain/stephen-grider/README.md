@@ -8,6 +8,7 @@
     - [Questions for tests](#questions-for-tests)
 - [LangChain](#langchain)
 - [Pinecone](#pinecone)
+- [LangFuse](#langfuse)
 - [Models](#models)
 - [Semantic Search \& Embeddings](#semantic-search--embeddings)
 
@@ -523,6 +524,13 @@ In essence, without tools like LangChain, the process of integrating and effecti
 - **Create new index**
   - **Name**: docs
   - **Dimensions**: 1536 (OpenAI)
+
+&nbsp;
+
+# LangFuse
+
+- [Self-hosted by Stephen](prod-langfuse.fly.dev)
+- [langfuse](langfuse.com)
 
 &nbsp;
 
