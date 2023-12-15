@@ -79,6 +79,11 @@ redis-server
 inv dev        # pdf-dist
 inv devworker  # pdf-dist
 python app.py  # local-do-files
+
+# Redis
+redis-cli
+HGETALL llm_score_values
+HGETALL llm_score_counts
 ```
 
 # env
