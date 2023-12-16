@@ -62,18 +62,18 @@ conda install ipykernel
 python mod_06_tools_agents.py
 
 # pdf-dist initial setup
-# Refer to README in pdf-dist
-cd chatgp-langchain/stephen-grider/
+# Refer to README in pdf_dist
+cd stephen_grider/chatgp_langchain
 conda create --name pdf-dist pip
 conda activate pdf-dist
-pip install -r pdf-dist/requirements.txt
-cd pdf-dist
+pip install -r pdf_dist/requirements.txt
+cd pdf_dist
 flask --app app.web init-db
 
 # local-do-files setup
-cd chatgp-langchain/stephen-grider
+cd stephen_grider/chatgp_langchain
 conda activate pdf-dist
-pip install -r local-do-files/requirements.txt
+pip install -r local_do_files/requirements.txt
 
 # Running the servers
 redis-server
@@ -92,6 +92,9 @@ HGETALL llm_score_counts
 ## langchainenv
 
 ```sh
+# Navigate to this directory before using python
+cd stephen_grider/chatgpt_langchain/mod_scripts
+
 # packages in environment at /opt/homebrew/Caskroom/miniconda/base/envs/langchainenv:
 #
 # Name                    Version                   Build  Channel
@@ -436,7 +439,7 @@ zlib                      1.2.13               h5a0b063_0
 
 ### IMPORTANT
 
-- **Open the `pdf-dist` directory directly in a new VS Code window instead of navigating into the directory from `playground-ai`.**
+- **Open the `pdf_dist` directory directly in a new VS Code window instead of navigating into the directory from `playground-ai`.**
 - **This is so that pylint doesn't highlight errors when you are using the `pdf-dist` conda environment.**
 
 ### Questions for tests
