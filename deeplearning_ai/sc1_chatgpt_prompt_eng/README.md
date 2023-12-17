@@ -7,6 +7,7 @@
   - [Principle 1: Write clear and specific instructions](#principle-1-write-clear-and-specific-instructions)
   - [Principle 2: Give the model time to “think”](#principle-2-give-the-model-time-to-think)
   - [Model Limitations: Hallucinations](#model-limitations-hallucinations)
+- [Iterative Prompt Development](#iterative-prompt-development)
 
 &nbsp;
 
@@ -75,5 +76,33 @@
 
 - Makes statements that sound plausible but are not true
 - **Reducing hallucinations:** First find relevant information, then answer the question based on the relevant information.
+
+&nbsp;
+
+# Iterative Prompt Development
+
+```
+                  Implementation
+    Idea    +-->    (code/data)
+                       Prompt
+      ^                  +
+      |                  |
+      |                  |
+      +                  V
+    Error   <--+  Experimental
+  Analysis           Result
+```
+
+- **Prompt guidelines**
+  - Be clear and specific
+  - Analyze why result does not give desired output.
+  - Refine the idea and the prompt
+  - Repeat
+- **Iterative Process**
+  - Try something
+  - Analyze where the result does not give what you want
+  - Clarify instructions, give more time to think
+  - Refine prompts with a batch of examples
+- **It's about having a good process to develop prompts that are effective for your application**
 
 &nbsp;
