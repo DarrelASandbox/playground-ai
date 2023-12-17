@@ -9,6 +9,7 @@
   - [Model Limitations: Hallucinations](#model-limitations-hallucinations)
 - [Iterative Prompt Development](#iterative-prompt-development)
 - [Summarizing](#summarizing)
+- [Inferring](#inferring)
 
 &nbsp;
 
@@ -43,6 +44,8 @@
 &nbsp;
 
 # Guidelines for Prompting
+
+- In this lesson, you'll practice two prompting principles and their related tactics in order to write effective prompts for large language models.
 
 ## A note about the backslash
 
@@ -82,6 +85,8 @@
 
 # Iterative Prompt Development
 
+- In this lesson, you'll iteratively analyze and refine your prompts to generate marketing copy from a product fact sheet.
+
 ```
                   Implementation
     Idea    +-->    (code/data)
@@ -110,6 +115,8 @@
 
 # Summarizing
 
+- In this lesson, you will summarize text with a focus on specific topics.
+
 > "Given the transcript above, your task is to extract the relevant information to summarize the strategies or tactics involve when it comes to summarizing using LLM."
 
 The transcript you've provided outlines several strategies and tactics for summarizing text using Large Language Models (LLMs), specifically in the context of product reviews. Here's a summary of the key points:
@@ -130,5 +137,11 @@ The transcript you've provided outlines several strategies and tactics for summa
 6. **Workflow Integration**: The transcript also discusses integrating this summarization technique into a workflow for more efficient review browsing. This includes generating short summaries of numerous reviews, allowing users to quickly scan them and delve into detailed reviews if needed.
 
 This approach demonstrates the versatility of LLMs in processing and summarizing text, offering valuable insights in a time-efficient manner, especially in data-rich environments like e-commerce.
+
+&nbsp;
+
+# Inferring
+
+- In this lesson, you will infer sentiment and topics from product reviews and news articles.
 
 &nbsp;
