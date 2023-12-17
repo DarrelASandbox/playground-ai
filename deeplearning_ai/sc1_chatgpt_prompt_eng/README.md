@@ -8,6 +8,7 @@
   - [Principle 2: Give the model time to “think”](#principle-2-give-the-model-time-to-think)
   - [Model Limitations: Hallucinations](#model-limitations-hallucinations)
 - [Iterative Prompt Development](#iterative-prompt-development)
+- [Summarizing](#summarizing)
 
 &nbsp;
 
@@ -104,5 +105,30 @@
   - Clarify instructions, give more time to think
   - Refine prompts with a batch of examples
 - **It's about having a good process to develop prompts that are effective for your application**
+
+&nbsp;
+
+# Summarizing
+
+> "Given the transcript above, your task is to extract the relevant information to summarize the strategies or tactics involve when it comes to summarizing using LLM."
+
+The transcript you've provided outlines several strategies and tactics for summarizing text using Large Language Models (LLMs), specifically in the context of product reviews. Here's a summary of the key points:
+
+1. **Basic Summary Generation**: Use LLMs to create concise summaries of lengthy texts. This is particularly useful for quickly understanding the content of extensive product reviews. The example given involves summarizing a review into a short, 30-word summary.
+
+2. **Customized Summaries for Specific Purposes**: Modify the summarization prompt to focus on certain aspects of the review that are relevant to different departments within a business. For example:
+
+   - Summaries for the shipping department can focus on delivery-related aspects.
+   - Summaries for the pricing department can concentrate on comments related to price and value.
+
+3. **Extracting Specific Information**: Instead of a general summary, prompts can be tailored to extract only the most relevant information for a particular purpose. For example, extracting only shipping-related information for the shipping department.
+
+4. **Summarizing Multiple Reviews**: Implementing a process to summarize multiple reviews at once. This involves placing reviews into a list, looping over them, and using prompts to generate concise summaries (e.g., limited to 20 words). This approach is useful for creating dashboards or overviews of customer feedback.
+
+5. **Application in E-commerce**: These summarization techniques are particularly useful in e-commerce settings where there are large volumes of product reviews. Summarizing helps in quickly understanding customer feedback and making informed decisions.
+
+6. **Workflow Integration**: The transcript also discusses integrating this summarization technique into a workflow for more efficient review browsing. This includes generating short summaries of numerous reviews, allowing users to quickly scan them and delve into detailed reviews if needed.
+
+This approach demonstrates the versatility of LLMs in processing and summarizing text, offering valuable insights in a time-efficient manner, especially in data-rich environments like e-commerce.
 
 &nbsp;
