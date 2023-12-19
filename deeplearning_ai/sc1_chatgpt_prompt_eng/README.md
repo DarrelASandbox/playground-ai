@@ -11,6 +11,7 @@
 - [Summarizing](#summarizing)
 - [Inferring](#inferring)
 - [Transforming](#transforming)
+- [Expanding](#expanding)
 
 &nbsp;
 
@@ -156,5 +157,14 @@ This approach demonstrates the versatility of LLMs in processing and summarizing
 - **Format Conversion**: ChatGPT can translate between formats. The prompt should describe the input and output formats.
 - **Spellcheck/Grammar check**: Here are some examples of common grammar and spelling problems and the LLM's response. To signal to the LLM that you want it to proofread your text, you instruct the model to 'proofread' or 'proofread and correct'.
 - [bad-grammar-examples](https://writingprompts.com/bad-grammar-examples/)
+
+&nbsp;
+
+# Expanding
+
+- In this lesson, you will generate customer service emails that are tailored to each customer's review.
+- **Temperature**:
+  - If you're trying to build a system that is reliable and predictable, you should go with this.
+  - If you're trying to use the model in a more creative way, where you might want a kind of wider variety of different outputs, you might want to use a higher temperature.
 
 &nbsp;
