@@ -13,6 +13,7 @@
 - [Transforming](#transforming)
 - [Expanding](#expanding)
 - [Chatbot](#chatbot)
+- [Summary](#summary)
 
 &nbsp;
 
@@ -174,5 +175,16 @@ This approach demonstrates the versatility of LLMs in processing and summarizing
 
 - In this lesson, you will explore how you can utilize the chat format to have extended conversations with chatbots personalized or specialized for specific tasks or behaviors.
 - **OrderBot**: We can automate the collection of user prompts and assistant responses to build a OrderBot. The OrderBot will take orders at a pizza restaurant.
+
+&nbsp;
+
+# Summary
+
+- **Principles**:
+  - Write clear and specific instructions
+  - Give the model time to "think"
+- Iterative prompt development
+- **Capabilities**: Summarizing, Inferring, Transforming, Expanding
+- Building a chatbot
 
 &nbsp;
