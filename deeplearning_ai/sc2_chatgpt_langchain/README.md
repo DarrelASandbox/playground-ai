@@ -2,6 +2,7 @@
 - [Introduction](#introduction)
   - [Overview](#overview)
   - [Components](#components)
+- [Models, Prompts and Output Parsers](#models-prompts-and-output-parsers)
 
 &nbsp;
 
@@ -49,3 +50,42 @@
     - Algorithms for getting LLMs to use tools
   - Agent Toolkit: 10+ implementations
     - Agents armed with specific tools for a specific application
+
+&nbsp;
+
+# Models, Prompts and Output Parsers
+
+- Direct API calls to OpenAI
+- API calls through LangChain:
+  - Prompts
+  - Models
+  - Output parsers
+- **Why use prompt templates?**
+  - Prompts can be long and detailed.
+  - Reuse good with templates
+  - LangChain also provides prompts for common operations.
+- LangChain output parsing works with prompt templates
+  - The library functions parse the LLM's output assuming that it will sue certain keywords.
+  - Example here uses Thought, Action, Observation as keywords for Chain-of-Thought Reasoning. (ReAct)
+
+```py
+EXAMPLES = ["""
+Question: What is the elevation range for the area that the eastern sector of the Colorado orogeny extends into?
+
+Thought: need to search Colorado orogeny, find the area that the eastern sector of the Colorado orogeny extends into, then find the elevation range of the area.
+
+Action: Search [Colorado orogeny]
+
+Observation: The Colorado orogeny was an episode of mountain building (an orogeny) in Colorado and surrounding areas.
+
+Thought: It does not mention the eastern sector. So I need to look up eastern sector.
+Action: Lookup(eastern sector)
+...
+
+Thought: High Plains rise in elevation from around 1,800 to 7,000 ft, so the answer is 1,800 to 7,000 ft.
+
+Action: Finish[1,800 to 7,000 ft]""",
+]
+```
+
+&nbsp;
