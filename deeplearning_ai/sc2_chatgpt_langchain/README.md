@@ -3,6 +3,10 @@
   - [Overview](#overview)
   - [Components](#components)
 - [Models, Prompts and Output Parsers](#models-prompts-and-output-parsers)
+- [Memory](#memory)
+  - [Memory Types](#memory-types)
+  - [Additional Memory Types](#additional-memory-types)
+  - [Large Language Models (LLM) are stateless](#large-language-models-llm-are-stateless)
 
 &nbsp;
 
@@ -87,5 +91,35 @@ Thought: High Plains rise in elevation from around 1,800 to 7,000 ft, so the ans
 Action: Finish[1,800 to 7,000 ft]""",
 ]
 ```
+
+&nbsp;
+
+# Memory
+
+## Memory Types
+
+- **ConversationBufferMemory**:
+  - This memory allows for storing of messages and then extracts the messages in a variable.
+- **ConversationBufferWindowMemory**:
+  - This memory keeps a list of the interactions of the conversation over time. It only uses the last K interactions.
+- **ConversationTokenBufferMemory**:
+  - This memory keeps a buffer of recent interactions in memory, and uses token length rather than number of interactions to determine when to flush interactions.
+- **ConversationSummaryMemory**:
+  - This memory creates a summary of the conversation over time.
+
+## Additional Memory Types
+
+- **Vector data memory**:
+  - Stores text (from conversation or elsewhere) in a vector database and retrieves the most relevant blocks of text.
+- **Entity memories**:
+  - Using an LLM, it remembers details about specific entities.
+- You can also use multiple memories at one time. E.g. Conversation memory + Entity memory to recall individuals.
+- You can also store the conversation in a conventional database (such as key-value store or SQL)
+
+## Large Language Models (LLM) are stateless
+
+- Each transaction is independent
+- Chatbots appear to have memory by providing the full conversation as **context**.
+- LangChain provides several kinds of **memory** to store and accumulate the conversation.
 
 &nbsp;
