@@ -7,6 +7,7 @@
   - [Memory Types](#memory-types)
   - [Additional Memory Types](#additional-memory-types)
   - [Large Language Models (LLM) are stateless](#large-language-models-llm-are-stateless)
+- [Chain](#chain)
 
 &nbsp;
 
@@ -121,5 +122,15 @@ Action: Finish[1,800 to 7,000 ft]""",
 - Each transaction is independent
 - Chatbots appear to have memory by providing the full conversation as **context**.
 - LangChain provides several kinds of **memory** to store and accumulate the conversation.
+
+&nbsp;
+
+# Chain
+
+- LLMChain
+- Sequential Chains
+  - SimpleSequentialChain (Exactly one input and one output)
+  - SequentialChain (Multiple inputs and one output)
+- Router Chain
 
 &nbsp;
