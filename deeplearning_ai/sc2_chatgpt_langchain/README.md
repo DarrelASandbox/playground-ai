@@ -8,6 +8,7 @@
   - [Additional Memory Types](#additional-memory-types)
   - [Large Language Models (LLM) are stateless](#large-language-models-llm-are-stateless)
 - [Chain](#chain)
+- [Q\&A over Documents](#qa-over-documents)
 
 &nbsp;
 
@@ -29,6 +30,13 @@
 - Key value adds:
   - Modular components
   - Use cases: Common ways to combine components
+
+```sh
+# conda env setup
+conda create --name dla "python>=3.7"
+conda activate dla
+pip install langchain openai python-dotenv "pydantic==1.10.9" tiktoken docarray
+```
 
 ## Components
 
@@ -132,5 +140,30 @@ Action: Finish[1,800 to 7,000 ft]""",
   - SimpleSequentialChain (Exactly one input and one output)
   - SequentialChain (Multiple inputs and one output)
 - Router Chain
+
+&nbsp;
+
+# Q&A over Documents
+
+- An example might be a tool that would allow you to query a product catalog for items of interest.
+- LLM's can only inspect a few thousand words at a time.
+- Embeddings vector captures content/meaning.
+- Text with similar content will have similar vectors
+  - My dog Rover likes to chase squirrels.
+  - Fluffy, my cat, refuses to eat from a can.
+  - The Chevy Bolt accelerates to 60 mph in 6.7 seconds.
+- Vector database
+
+![vector_database](diagrams/vector_database.png)
+
+- Stuff method
+  - Stuffing is the simplest method. You simply stuff all data into the prompt as context to pass to the language model.
+  - **Pros**: It makes a single call to the LLM. The LLM has access to all the data at once.
+  - **Cons**: LLMs have a context length, and for large documents or many documents this will not work as it will result in a prompt larger than the context length.
+- Map_reduce method
+- Refine method
+- Map_rerank method
+
+![methods](diagrams/methods.png)
 
 &nbsp;
