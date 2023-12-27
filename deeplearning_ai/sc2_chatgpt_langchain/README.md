@@ -9,6 +9,7 @@
   - [Large Language Models (LLM) are stateless](#large-language-models-llm-are-stateless)
 - [Chain](#chain)
 - [Q\&A over Documents](#qa-over-documents)
+- [Evaluation](#evaluation)
 
 &nbsp;
 
@@ -165,5 +166,14 @@ Action: Finish[1,800 to 7,000 ft]""",
 - Map_rerank method
 
 ![methods](diagrams/methods.png)
+
+&nbsp;
+
+# Evaluation
+
+- Example generation
+- Manual evaluation (and debuging)
+- LLM-assisted evaluation
+- LangChain evaluation platform
 
 &nbsp;
