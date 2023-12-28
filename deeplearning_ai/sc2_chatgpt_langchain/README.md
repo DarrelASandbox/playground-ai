@@ -10,6 +10,7 @@
 - [Chain](#chain)
 - [Q\&A over Documents](#qa-over-documents)
 - [Evaluation](#evaluation)
+- [Agents](#agents)
 
 &nbsp;
 
@@ -31,13 +32,6 @@
 - Key value adds:
   - Modular components
   - Use cases: Common ways to combine components
-
-```sh
-# conda env setup
-conda create --name dla "python>=3.7"
-conda activate dla
-pip install langchain openai python-dotenv "pydantic==1.10.9" tiktoken docarray
-```
 
 ## Components
 
@@ -177,3 +171,11 @@ Action: Finish[1,800 to 7,000 ft]""",
 - LangChain evaluation platform
 
 &nbsp;
+
+# Agents
+
+- A large language model is sometimes used as a reasoning engine, where you can provide it with chunks of text or other sources of information.
+- The large language model, or LLM, may use this background knowledge that it's learned from the internet, combined with the new information you provide, to help you answer questions, reason through content, or even decide what to do next.
+- That's what LangChain's Agents framework is designed to help you do.
+- Using built in LangChain tools: DuckDuckGo search and Wikipedia
+- Defining your own tools
