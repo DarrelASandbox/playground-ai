@@ -4,6 +4,7 @@
   - [Goal](#goal)
   - [Making images useful to a neural network](#making-images-useful-to-a-neural-network)
   - [Training a neural network to make sprites](#training-a-neural-network-to-make-sprites)
+- [Sampling](#sampling)
 
 &nbsp;
 
@@ -60,5 +61,45 @@
   - You can sample noise from the normal distribution
   - Get a completely new sprite by using the net to remove the noise
 - Now, you can get even more sprites, beyond your training data
+
+&nbsp;
+
+# Sampling
+
+- NN tries to fully predict the noise at each step. Realistically, it's just a prediction. You need multiple steps to get high quality sprites.
+
+![sampling](diagrams/sampling.png)
+
+![sample](diagrams/sample.png)
+
+```py
+# sample using standard DDPM algorithm
+# Denoising Diffusion Probabilistic Models
+@torch.no_grad()
+def sample_ddpm(n_sample, device, save_rate=20):
+  # x_T ~ N(0, 1), sample initial noise
+  samples = torch.randn(n_sample, 3, height, height).to(device)
+  # ...
+  for i in range(timesteps, 0, -1):
+    # reshape time tensor
+    t = torch.tensor([i/timesteps])[:, None, None, None].to(device)
+
+    # sample some random noise to inject back in. For i = 1, don't add back in noise
+    z = torch.randn_like(samples) if i > 1 else 0
+
+    eps = nn_model(samples, t) # predict noise e_(x_t,t)
+    samples = denoise_add_noise(samples, i, eps, z)
+    # ...
+
+  return samples
+```
+
+![sampling_iteration_details](diagrams/sampling_iteration_details.png)
+
+- The NN expects a noisy sample as input.
+- You can add in additional noise before it gets passed to the next step.
+- Empirically, this stabilizes the NN so it doesn't collapse to something closer to the average of the dataset.
+
+![sample_and_noise](diagrams/sample_and_noise.png)
 
 &nbsp;
