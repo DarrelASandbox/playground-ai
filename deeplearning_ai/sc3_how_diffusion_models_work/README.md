@@ -6,6 +6,8 @@
   - [Training a neural network to make sprites](#training-a-neural-network-to-make-sprites)
 - [Sampling](#sampling)
 - [Neural Network](#neural-network)
+- [Training](#training)
+  - [Algorithm](#algorithm)
 
 &nbsp;
 
@@ -229,5 +231,56 @@ The U-Net architecture is designed to take an input image and output a modified 
 
 **In Summary:**
 This code snippet exemplifies how a U-Net can be adapted to include additional conditioning information, allowing it to generate more controlled outputs. The context embedding is used to steer the generation process, while the time embedding informs the network about the diffusion timestep, enabling precise noise prediction for image generation. This approach demonstrates the flexibility and extensiveness of U-Nets in generative models.
+
+&nbsp;
+
+# Training
+
+- NN learns to predict noise - really learns the distribution of what is not noise.
+- Sample random timestep (noise level) per image to train more stably.
+
+![train_using_noise](diagrams/train_using_noise.png)
+
+The goal of the neural network is to predict noise and learn the distribution of both noise and sprite likeness in images. This is achieved by adding noise to a sprite from the training data and having the neural network predict this noise. The predicted noise is compared to the actual noise to compute the loss, which is used to improve the network's predictions through backpropagation. To avoid overfitting to a single sprite and ensure stability, the neural network is exposed to different sprites and noise levels during training by randomly sampling time steps and corresponding noise levels. This approach leads to a more stable training scheme.
+
+![epoch](diagrams/epoch.png)
+
+Initially, at epoch 0, the neural network cannot significantly alter the noise input due to its lack of understanding of the sprite's characteristics. However, by epoch 31, the network has learned enough to predict and subtract noise effectively, resulting in an output closely resembling the intended wizard hat sprite. The summary highlights the neural network's learning process and improvement over time, illustrating the transformation from an ineffective initial state to a more accurate representation of the sprite.
+
+![epochs](diagrams/epochs.png)
+
+## Algorithm
+
+1. Sample training image.
+2. Sample timestep `t`. This determines the level of noise.
+3. Sample the noise.
+4. Add noise to image.
+5. Input this into the neural network. Neural network predicts the noise.
+6. Compute loss between predicted and true noise.
+7. Backprop & learn!
+
+The process begins by loading data and iterating through images. In each iteration, a random time step `t` is selected, determining the noise level. Noise is sampled and added to the image, which is then fed into the neural network along with the time step. The network predicts the noise, and the mean squared error between the predicted and actual noise is calculated to determine the loss. This loss is used in backpropagation to update the model, helping it learn the distinction between noise and the desired output, in this case, a sprite. The provided Python code snippet further illustrates the process, including data perturbation, noise recovery, loss calculation, and model optimization. The summary captures the essential steps and purpose of the training algorithm, conveying its methodical approach to improving neural network predictions.
+
+```py
+# linearly decay learning rate
+optim.param_groups[0]['lr'] = lrate*(1-ep/n_epoch)
+
+pbar = tqdm(dataloader, mininterval=2)
+for x, _ in pbar: # x: images
+  optim.zero_grad()
+
+  # perturb data
+  t = torch.randint(1, timesteps + 1, (x.shape[0],)).to(device)
+  noise = torch.randn_like(x)
+  x_pert - perturb_input(x, t, noise)
+
+  # use network to recover noise
+  pred_noise = nn_model(x_perl, t/timesteps)
+
+  # loss is mean squared error between the predicted and true noise
+  loss = F.mse_loss(pred_noise, noise)
+  loss.backward()
+  optim.step()
+```
 
 &nbsp;
