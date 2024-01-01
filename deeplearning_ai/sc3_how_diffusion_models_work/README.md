@@ -8,6 +8,7 @@
 - [Neural Network](#neural-network)
 - [Training](#training)
   - [Algorithm](#algorithm)
+- [Controlling](#controlling)
 
 &nbsp;
 
@@ -282,5 +283,21 @@ for x, _ in pbar: # x: images
   loss.backward()
   optim.step()
 ```
+
+&nbsp;
+
+# Controlling
+
+- Embeddings vector captures meaning
+- Text with similar content will have similar vectors
+
+![adding_context](diagrams/adding_context.png)
+
+- **Context**
+  - Is a vector for controlling generation.
+  - Can be text embeddings, e.g. > 1000 in length.
+  - Can also be categories, e.g. 5 in length.
+
+![context](diagrams/context.png)
 
 &nbsp;
