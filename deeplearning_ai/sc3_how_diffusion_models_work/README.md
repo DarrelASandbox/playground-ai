@@ -9,6 +9,8 @@
 - [Training](#training)
   - [Algorithm](#algorithm)
 - [Controlling](#controlling)
+- [Speeding Up](#speeding-up)
+- [Sampling is slow](#sampling-is-slow)
 
 &nbsp;
 
@@ -299,5 +301,24 @@ for x, _ in pbar: # x: images
   - Can also be categories, e.g. 5 in length.
 
 ![context](diagrams/context.png)
+
+&nbsp;
+
+# Speeding Up
+
+# Sampling is slow
+
+- You want more images fast.
+- But sampling is slow because:
+  - There are many timesteps.
+  - Each timestep is dependent on the previous one (Markovian).
+- Many new **samplers** address this problem of speed.
+- One is called **DDIM**: Denoising Diffusion Implicit Models
+
+![ddim_skips_timesteps](diagrams/ddim_skips_timesteps.png)
+
+- DDIM is faster because it skips timesteps.
+- It predicts a rough idea of the final output and then refines it with the denoising process.
+- Empirically, people have found that with a model trained on these 500 steps, for example, DDPM will perform better if you sample for 500 steps. But for any number under 500 steps, DDIM will do much better.
 
 &nbsp;
