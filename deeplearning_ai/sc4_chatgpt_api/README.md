@@ -4,6 +4,7 @@
   - [Two types of LLMs](#two-types-of-llms)
   - [Tokens](#tokens)
   - [System, User and Assistant Messages](#system-user-and-assistant-messages)
+- [Classification](#classification)
 
 &nbsp;
 
@@ -67,5 +68,14 @@ messages = [
 - This has shortened the development time for some applications from months to mere hours or days, revolutionizing the speed at which AI applications can be built.
 - However, this method primarily benefits unstructured data applications (like text and, to a lesser extent, vision) and is less effective for structured data applications involving numerical values in spreadsheets.
 - Despite this limitation, the ability to rapidly construct AI components is changing the workflow and pace of system development.
+
+&nbsp;
+
+# Classification
+
+- Evaluate inputs to ensure quality and safety in systems like customer service assistants.
+- The approach involves classifying queries into primary and secondary categories, which then guide the selection of specific instructions to address the query. A structured system, often using delimiters like hashtags, helps in segregating and identifying different parts of instructions or outputs.
+- For example, a customer service query is classified into categories like billing, technical support, account management, or general inquiry, with further subdivisions like unsubscribe or upgrade. The process is illustrated with examples where user queries are classified into appropriate categories, demonstrating how the system can provide tailored responses based on these classifications.
+- This structured approach allows for a more organized and efficient handling of customer queries, enabling the system to provide relevant information or actions based on the specific nature of the query. The concept emphasizes the importance of proper input evaluation in creating responsive and responsible user interactions in various systems.
 
 &nbsp;
