@@ -5,6 +5,8 @@
   - [Tokens](#tokens)
   - [System, User and Assistant Messages](#system-user-and-assistant-messages)
 - [Classification](#classification)
+- [Moderation](#moderation)
+  - [Prompt Injection](#prompt-injection)
 
 &nbsp;
 
@@ -77,5 +79,20 @@ messages = [
 - The approach involves classifying queries into primary and secondary categories, which then guide the selection of specific instructions to address the query. A structured system, often using delimiters like hashtags, helps in segregating and identifying different parts of instructions or outputs.
 - For example, a customer service query is classified into categories like billing, technical support, account management, or general inquiry, with further subdivisions like unsubscribe or upgrade. The process is illustrated with examples where user queries are classified into appropriate categories, demonstrating how the system can provide tailored responses based on these classifications.
 - This structured approach allows for a more organized and efficient handling of customer queries, enabling the system to provide relevant information or actions based on the specific nature of the query. The concept emphasizes the importance of proper input evaluation in creating responsive and responsible user interactions in various systems.
+
+&nbsp;
+
+# Moderation
+
+- [openai - moderation](https://platform.openai.com/docs/guides/moderation)
+
+- In building user-input systems, it's crucial to ensure responsible usage and prevent abuse. One effective tool is OpenAI's Moderation API, which helps developers filter prohibited content like hate, self-harm, sexual content, and violence, ensuring compliance with usage policies.
+- It classifies content into detailed subcategories and indicates whether an input is flagged as harmful. For instance, an input flagged for violence will show respective category scores and an overall flag status.
+
+## Prompt Injection
+
+- Users attempt to manipulate the AI system by overriding the intended instructions.
+- To prevent this, developers can use delimiters and clear instructions. For more sophisticated applications, they can employ strategies like additional prompts asking if the user is attempting a prompt injection.
+- When users try to bypass these measures, well-designed systems, especially those with advanced models like GPT-4, can maintain their integrity and respond appropriately. Moreover, developers can implement systems to classify user messages as potential prompt injections, enhancing the security and effectiveness of their applications.
 
 &nbsp;
