@@ -7,6 +7,7 @@
 - [Classification](#classification)
 - [Moderation](#moderation)
   - [Prompt Injection](#prompt-injection)
+- [Chain of Thought Reasoning](#chain-of-thought-reasoning)
 
 &nbsp;
 
@@ -94,5 +95,16 @@ messages = [
 - Users attempt to manipulate the AI system by overriding the intended instructions.
 - To prevent this, developers can use delimiters and clear instructions. For more sophisticated applications, they can employ strategies like additional prompts asking if the user is attempting a prompt injection.
 - When users try to bypass these measures, well-designed systems, especially those with advanced models like GPT-4, can maintain their integrity and respond appropriately. Moreover, developers can implement systems to classify user messages as potential prompt injections, enhancing the security and effectiveness of their applications.
+
+&nbsp;
+
+# Chain of Thought Reasoning
+
+- Processing inputs to generate outputs is vital, often necessitating a model to reason through a series of steps.
+- Chain of Thought Reasoning, as introduced, is a strategy where the model systematically approaches a problem, crucial for avoiding rushed conclusions and fostering more methodical problem-solving.
+- Inner monologue, another technique, involves concealing the model's reasoning from users, particularly beneficial in contexts like tutoring, where revealing the process might provide answers prematurely.
+- The example provided demonstrates the application of these concepts, using a customer service scenario where the model categorizes queries and responds based on a pre-defined product list and structured reasoning steps. This process involves identifying the product in question, assessing user assumptions, and correcting them if necessary in a friendly manner.
+- However, the complexity of the instructions may not be necessary for advanced models like GPT-4, suggesting a need for balance in prompt complexity and an encouragement for experimentation.
+- This approach is part of an ongoing effort to handle complex tasks by breaking them down into simpler subtasks, optimizing the model's performance and output relevance.
 
 &nbsp;
