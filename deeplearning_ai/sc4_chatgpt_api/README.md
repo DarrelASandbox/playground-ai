@@ -11,6 +11,9 @@
 - [Chaining Prompts](#chaining-prompts)
   - [Splitting complex tasks into simpler subtasks](#splitting-complex-tasks-into-simpler-subtasks)
   - [More advanced techniques for information retrieval](#more-advanced-techniques-for-information-retrieval)
+- [Check Outputs](#check-outputs)
+  - [Moderation API](#moderation-api)
+  - [Self-evaluation by the model](#self-evaluation-by-the-model)
 
 &nbsp;
 
@@ -134,5 +137,20 @@ messages = [
 
 - One of the most effective ways to retrieve information is using text embeddings. And embeddings can be used to implement efficient knowledge retrieval over a large corpus to find information related to a given query.
 - One of the key advantages of using text embeddings is that they enable fuzzy or semantic search, which allows you to find relevant information without using the exact keywords.
+
+&nbsp;
+
+# Check Outputs
+
+## Moderation API
+
+- The moderation API, previously discussed for input evaluation, can also filter outputs to flag potentially harmful content, which is crucial for sensitive audiences or contexts.
+- Adjusting the flagging thresholds allows for tailored moderation based on specific needs. As models improve, the likelihood of generating harmful outputs decreases, making this a proactive and evolving tool for maintaining quality and safety.
+
+## Self-evaluation by the model
+
+- Another strategy involves asking the model to self-evaluate its outputs. By feeding the generated response back to the model along with specific rubrics or guidelines, it can assess the adequacy and accuracy of its answers.
+- This approach is demonstrated through an example where the model checks if a customer service response is satisfactory and factually correct based on provided product information.
+- The model's feedback helps determine if the output is presentable or if a new response should be generated. This method, while potentially enhancing immediate output quality, may be unnecessary for more advanced models like GPT-4 and can add latency and costs due to additional processing.
 
 &nbsp;
