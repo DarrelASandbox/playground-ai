@@ -8,6 +8,9 @@
 - [Moderation](#moderation)
   - [Prompt Injection](#prompt-injection)
 - [Chain of Thought Reasoning](#chain-of-thought-reasoning)
+- [Chaining Prompts](#chaining-prompts)
+  - [Splitting complex tasks into simpler subtasks](#splitting-complex-tasks-into-simpler-subtasks)
+  - [More advanced techniques for information retrieval](#more-advanced-techniques-for-information-retrieval)
 
 &nbsp;
 
@@ -106,5 +109,30 @@ messages = [
 - The example provided demonstrates the application of these concepts, using a customer service scenario where the model categorizes queries and responds based on a pre-defined product list and structured reasoning steps. This process involves identifying the product in question, assessing user assumptions, and correcting them if necessary in a friendly manner.
 - However, the complexity of the instructions may not be necessary for advanced models like GPT-4, suggesting a need for balance in prompt complexity and an encouragement for experimentation.
 - This approach is part of an ongoing effort to handle complex tasks by breaking them down into simpler subtasks, optimizing the model's performance and output relevance.
+
+&nbsp;
+
+# Chaining Prompts
+
+## Splitting complex tasks into simpler subtasks
+
+- More Focused (breaks down a complex task)
+- Context Limitations (Max tokens for input prompt and output)
+- Reduced Costs (pay per token)
+- Maintain state of workflow
+
+![maintain_state_of_workflow](diagrams/maintain_state_of_workflow.png)
+
+- Reduce number of tokens used in a prompt
+- Skip some chains of the workflow when not needed for the task.
+- Easier to test
+- Include human-in-the-loop
+- For complex tasks, keep track of state external to the LLM (in your own code).
+- Use external tools (web search, databases)
+
+## More advanced techniques for information retrieval
+
+- One of the most effective ways to retrieve information is using text embeddings. And embeddings can be used to implement efficient knowledge retrieval over a large corpus to find information related to a given query.
+- One of the key advantages of using text embeddings is that they enable fuzzy or semantic search, which allows you to find relevant information without using the exact keywords.
 
 &nbsp;
