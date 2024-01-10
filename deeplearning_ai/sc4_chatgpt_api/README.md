@@ -15,6 +15,7 @@
   - [Moderation API](#moderation-api)
   - [Self-evaluation by the model](#self-evaluation-by-the-model)
 - [Build an End-to-End System](#build-an-end-to-end-system)
+- [Evaluation Part 1 - Process of Building an App](#evaluation-part-1---process-of-building-an-app)
 
 &nbsp;
 
@@ -160,5 +161,31 @@ messages = [
 
 - Checking the input with the moderation API, extracting product lists, retrieving product information, generating a response, and running the response through the moderation API again.
 - If a step fails, such as a moderation flag or a lack of product information, the system informs the user and can take alternative actions.
+
+&nbsp;
+
+# Evaluation Part 1 - Process of Building an App
+
+![process_of_building_an_app](diagrams/process_of_building_an_app.png)
+
+- Tune prompts on handful of examples
+- Add additional "tricky" examples opportunistically
+- Develop metrics to measure performance on examples
+- Collect randomly sampled set of examples to tune to (development set/hold-out cross validation set)
+- Collect and use a hold-out test set
+
+Evaluating the outputs of a Large Language Model (LLM) in application development requires a distinctive approach compared to traditional machine learning. In LLM-based applications, development starts without a test set, instead gradually building up a set of test examples. This contrasts with traditional supervised learning, where a test set is often established upfront.
+
+The initial phase of LLM evaluation involves tuning prompts with a few examples, typically ranging from one to five. This process identifies and rectifies prompt-specific issues. As testing progresses, additional challenging examples are incorporated opportunistically into the development set. This evolving set assists in fine-tuning the LLM's responses.
+
+An interesting aspect of this process is the ability to determine a satisfactory performance level at any stage. In many cases, applications function adequately with minimal development. However, for more refined performance or high-stakes applications where accuracy and bias are critical, developers may need to expand their testing approach. This expansion involves collecting a randomly sampled set of examples, serving as a development or hold-out cross-validation set.
+
+The final stage, which is more critical for applications requiring high accuracy, involves creating a hold-out test set that remains untouched during the tuning phase. This unbiased set provides a more accurate performance estimate.
+
+This process is demonstrated with the Jupyter notebook. A utils function retrieves product and category lists, and prompts are designed to extract relevant information based on user queries. Initial testing with a few examples leads to prompt refinement. As the system encounters tricky prompts during testing, these are added to the test set for further fine-tuning.
+
+To streamline testing as the development set grows, automation becomes necessary. The video illustrates this through a function that evaluates responses against ideal answers, thereby quantifying performance. This method proves effective even with a relatively small number of handpicked examples.
+
+In summary, building and evaluating LLM-based applications involves an iterative process of prompt tuning and testing with a gradually expanding set of examples. This approach, while differing significantly from traditional supervised learning, can yield efficient and effective systems, especially when tailored to the application's specific requirements and risk levels.
 
 &nbsp;
