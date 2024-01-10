@@ -14,6 +14,7 @@
 - [Check Outputs](#check-outputs)
   - [Moderation API](#moderation-api)
   - [Self-evaluation by the model](#self-evaluation-by-the-model)
+- [Build an End-to-End System](#build-an-end-to-end-system)
 
 &nbsp;
 
@@ -152,5 +153,12 @@ messages = [
 - Another strategy involves asking the model to self-evaluate its outputs. By feeding the generated response back to the model along with specific rubrics or guidelines, it can assess the adequacy and accuracy of its answers.
 - This approach is demonstrated through an example where the model checks if a customer service response is satisfactory and factually correct based on provided product information.
 - The model's feedback helps determine if the output is presentable or if a new response should be generated. This method, while potentially enhancing immediate output quality, may be unnecessary for more advanced models like GPT-4 and can add latency and costs due to additional processing.
+
+&nbsp;
+
+# Build an End-to-End System
+
+- Checking the input with the moderation API, extracting product lists, retrieving product information, generating a response, and running the response through the moderation API again.
+- If a step fails, such as a moderation flag or a lack of product information, the system informs the user and can take alternative actions.
 
 &nbsp;
