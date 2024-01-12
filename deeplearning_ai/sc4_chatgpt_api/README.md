@@ -16,6 +16,7 @@
   - [Self-evaluation by the model](#self-evaluation-by-the-model)
 - [Build an End-to-End System](#build-an-end-to-end-system)
 - [Evaluation Part 1 - Process of Building an App](#evaluation-part-1---process-of-building-an-app)
+- [Evaluation Part 2 - Set of Guidelines](#evaluation-part-2---set-of-guidelines)
 
 &nbsp;
 
@@ -187,5 +188,15 @@ This process is demonstrated with the Jupyter notebook. A utils function retriev
 To streamline testing as the development set grows, automation becomes necessary. The video illustrates this through a function that evaluates responses against ideal answers, thereby quantifying performance. This method proves effective even with a relatively small number of handpicked examples.
 
 In summary, building and evaluating LLM-based applications involves an iterative process of prompt tuning and testing with a gradually expanding set of examples. This approach, while differing significantly from traditional supervised learning, can yield efficient and effective systems, especially when tailored to the application's specific requirements and risk levels.
+
+&nbsp;
+
+# Evaluation Part 2 - Set of Guidelines
+
+Evaluating LLM outputs, especially when they are used to generate text, requires a nuanced approach, as there isn't always a singular correct answer. The process involves using helper functions to analyze a customer message, such as inquiries about products like the "SmartX Pro phone" and "Fotosnap camera", and then determining the quality of the assistant's response. A rubric, a set of guidelines for evaluation, is essential in assessing the response on various dimensions. This rubric emphasizes comparing the factual content of the assistant's response with the provided context while ignoring stylistic differences. It checks whether the response is solely based on the provided context, includes extraneous information, or has inconsistencies with the context.
+
+Using ChatGPT 3.5 Turbo model for evaluation is discussed, but for a more robust analysis, upgrading to the GPT-4 model is recommended, despite its higher cost. The video suggests two design patterns for LLM output evaluation. The first involves specifying a rubric to evaluate the output of one LLM using another. The second pattern involves comparing the LLM output to an ideal response written by an expert, a technique that goes beyond traditional metrics like the BLEU score. This method uses a prompt to instruct an LLM to evaluate the output by comparing it to an ideal response, with a scoring system ranging from A to E based on the consistency and completeness of the information.
+
+The effectiveness of these evaluation methods is demonstrated through examples, including one where the assistant's response receives a high score for being consistent with the expert answer, albeit shorter. Another example uses a quote from the movie "Forrest Gump" as an assistant response, which is correctly identified as a poor answer due to its irrelevance. The video concludes by highlighting the importance of these evaluation tools not only during the development phase of LLM systems but also for ongoing performance monitoring and improvement in real-world applications.
 
 &nbsp;
