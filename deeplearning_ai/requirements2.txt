@@ -4,3 +4,8 @@ pydantic==1.10.9
 tiktoken
 panel
 jupyter_bokeh
+pypdf
+yt_dlp
+ffmpeg
+ffprobe
+bs4

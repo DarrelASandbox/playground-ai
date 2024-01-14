@@ -47,3 +47,27 @@
 ![retrieval_augmented_generation](diagrams/retrieval_augmented_generation.png)
 
 &nbsp;
+
+# Document Loading
+
+## Loaders
+
+- Loaders deal with the specifics of accessing and converting data
+  - Accessing
+    - Web Sites
+    - Data Bases
+    - YouTube
+    - arXiv
+    - ...
+  - Data Types
+    - PDF
+    - HTML
+    - JSON
+    - Word, PowerPoint
+- Returns a list of `Document` objects:
+
+![document_objects](diagrams/document_objects.png)
+
+![document_loaders](diagrams/document_loaders.png)
+
+&nbsp;
