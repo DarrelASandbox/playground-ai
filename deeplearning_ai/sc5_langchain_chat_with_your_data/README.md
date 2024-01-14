@@ -71,3 +71,36 @@
 ![document_loaders](diagrams/document_loaders.png)
 
 &nbsp;
+
+# Document Splitting
+
+- Splitting Documents into smaller chunks
+  - Retaining meaningful relationships
+
+![document_splitting](diagrams/document_splitting.png)
+
+> ... on this model. The Toyota Camry has a head-snapping 80 HP and an eight-speed automatic transmission that will...
+
+- **Chunk 1**: on this model. The Toyota Camry has a head-snapping
+- **Chunk 2**: 80 HP and an eight-speed automatic transmission that will
+- **Question**: What are the specifications on the Camry?
+
+```py
+# Example Splitter
+langchain.text_splitter.CharacterTextSplitter(
+  separator: str= "\n\n"
+  chunk_size=4000,
+  chunk_overlap=200,
+  length_function=<builtin function len>,
+)
+```
+
+- Methods:
+  - `create_documents()` - Create documents from a list of texts.
+  - `split_documents()` - Split documents.
+
+![chunk_size_chunk_overlap](diagrams/chunk_size_chunk_overlap.png)
+
+- [Types of Text Splitters](https://python.langchain.com/docs/modules/data_connection/document_transformers/#types-of-text-splitters)
+
+&nbsp;
