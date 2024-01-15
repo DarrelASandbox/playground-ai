@@ -104,3 +104,22 @@ langchain.text_splitter.CharacterTextSplitter(
 - [Types of Text Splitters](https://python.langchain.com/docs/modules/data_connection/document_transformers/#types-of-text-splitters)
 
 &nbsp;
+
+# Vector Stores and Embeddings
+
+- Embedding vector captures content/meaning
+- Text with similar content will have similar vectors
+
+![embedding_vector](diagrams/embedding_vector.png)
+
+1. My dog Rover likes to chase squirrels.
+2. Fluffy, my cat, refuses to eat from a can.
+3. The Chevy Bolt accelerates to 60 mph in 6.7 seconds.
+
+![similar_vectors](diagrams/similar_vectors.png)
+
+![vector_store](diagrams/vector_store.png)
+
+![vector_store_database](diagrams/vector_store_database.png)
+
+&nbsp;
