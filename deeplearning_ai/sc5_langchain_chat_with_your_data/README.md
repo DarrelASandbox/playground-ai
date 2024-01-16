@@ -123,3 +123,46 @@ langchain.text_splitter.CharacterTextSplitter(
 ![vector_store_database](diagrams/vector_store_database.png)
 
 &nbsp;
+
+# Retrieval
+
+![Retrieval](diagrams/retrieval.png)
+
+- Accessing/indexing the data in the vector store
+  - Basic semantic similarity
+  - Maximum marginal relevance
+  - Including Metadata
+- LLM Aided Retrieval
+
+## Maximum Marginal Relevance (MMR)
+
+- You may not always want to choose the most similar responses
+
+![maximum_marginal_relevance](diagrams/maximum_marginal_relevance.png)
+
+- MMR algorithm
+  - Query the Vector Store
+  - Choose the `fetch_k` most similar responses
+  - Within those responses choose the `k` most diverse
+
+![mmr_algorithm](diagrams/mmr_algorithm.png)
+
+## LLM Aided Retrieval
+
+- There are several situations where the Query applied to the DB is more than just the Question asked.
+- One is SelfQuery, where we use an LLM to convert the user question into a query.
+
+![llm_aided_retrieval](diagrams/llm_aided_retrieval.png)
+
+## Compression
+
+- Increase the number of results you can put in the context by shrinking the responses to only the relevant information.
+
+## Other types of retrieval
+
+- Not using a vector database, such as:
+  - SVM
+  - TF-IDF
+  - ...
+
+&nbsp;

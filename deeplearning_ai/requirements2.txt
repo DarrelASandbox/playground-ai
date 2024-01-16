@@ -9,3 +9,4 @@ yt_dlp
 ffmpeg
 ffprobe
 bs4
+lark
