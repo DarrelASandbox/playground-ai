@@ -166,3 +166,17 @@ langchain.text_splitter.CharacterTextSplitter(
   - ...
 
 &nbsp;
+
+# Question Answering
+
+![question_answering](diagrams/question_answering.png)
+
+- Multiple relevant documents have been retrieved from the vector store
+- Potentially compress the relevant splits to fit into the LLM context
+- Send the information along with our question to an LLM to select and format an answer
+
+![retrievalqa_chain](diagrams/retrievalqa_chain.png)
+
+![3_additional_methods](diagrams/3_additional_methods.png)
+
+&nbsp;
