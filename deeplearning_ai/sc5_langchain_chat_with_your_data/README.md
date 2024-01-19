@@ -180,3 +180,17 @@ langchain.text_splitter.CharacterTextSplitter(
 ![3_additional_methods](diagrams/3_additional_methods.png)
 
 &nbsp;
+
+# Chat
+
+## ConversationalRetrievalChain
+
+- [// PersistentLocalHnswSegment.get_file_handle_count()](https://github.com/imartinez/privateGPT/issues/1012#issuecomment-1760793116)
+
+```py
+qa = ConversationalRetrievalChain.from_llm(ChatOpenAI(temperature=0), vectorstore.as_retriever(), memory=memory)
+```
+
+![ConversationalRetrievalChain](diagrams/ConversationalRetrievalChain.png)
+
+&nbsp;

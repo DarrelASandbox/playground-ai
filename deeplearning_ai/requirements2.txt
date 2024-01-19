@@ -10,3 +10,4 @@ ffmpeg
 ffprobe
 bs4
 lark
+langchain[docarray]
