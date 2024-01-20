@@ -1,0 +1,10 @@
+OPENAI_API_KEY=
+HF_API_KEY=
+
+HF_API_SUMMARY_BASE=https://api-inference.huggingface.co/models/sshleifer/distilbart-cnn-12-6
+HF_API_NER_BASE=https://api-inference.huggingface.co/models/dslim/bert-base-NER
+
+PORT1=3010
+PORT2=3020
+PORT3=3030
+PORT4=3040

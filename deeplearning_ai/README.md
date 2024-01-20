@@ -8,4 +8,9 @@ pip install -r deeplearning_ai/requirements.txt
 conda create --name lc -c conda-forge langchain openai==0.28 chromadb
 conda activate lc
 pip install -r deeplearning_ai/requirements2.txt
+
+# Gradio
+conda create --name gr -c conda-forge gradio
+conda activate gr
+pip install -r deeplearning_ai/requirements3.txt
 ```
