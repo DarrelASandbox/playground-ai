@@ -36,3 +36,9 @@
 - **bert-base-NER** has been trained to recognize four types of entities: location (LOC), organizations (ORG), person (PER) and Miscellaneous (MISC).
 
 &nbsp;
+
+# Image Captioning App
+
+- [Salesforce/blip-image-captioning-base](https://huggingface.co/Salesforce/blip-image-captioning-base)
+
+&nbsp;
