@@ -4,6 +4,7 @@ HF_API_KEY=
 HF_API_SUMMARY_BASE=https://api-inference.huggingface.co/models/sshleifer/distilbart-cnn-12-6
 HF_API_NER_BASE=https://api-inference.huggingface.co/models/dslim/bert-base-NER
 HF_API_ITT_BASE=https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-base
+HF_API_TTI_BASE=https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5
 
 PORT1=3010
 PORT2=3020

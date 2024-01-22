@@ -42,3 +42,12 @@
 - [Salesforce/blip-image-captioning-base](https://huggingface.co/Salesforce/blip-image-captioning-base)
 
 &nbsp;
+
+# Image Generation App
+
+## Diffusion Model
+
+- Text-to-image model generates images from input text.
+- We are using an open-source [**runwayml/stable-diffusion-v1-5**](https://huggingface.co/runwayml/stable-diffusion-v1-5) using the 🧨 diffusers library.
+
+&nbsp;
