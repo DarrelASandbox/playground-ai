@@ -51,3 +51,7 @@
 - We are using an open-source [**runwayml/stable-diffusion-v1-5**](https://huggingface.co/runwayml/stable-diffusion-v1-5) using the 🧨 diffusers library.
 
 &nbsp;
+
+# Describe and Generate a Game
+
+&nbsp;
