@@ -38,3 +38,13 @@
 - W&B MLOps Platform: Integrate into every product ML framework
 
 &nbsp;
+
+# Instrument W&B
+
+## Why use Weights & Biases - Debugging and evaluating Generative AI
+
+- Integrate quickly, track & version automatically
+- Visualize your data and uncover critical insights
+- Improve performance so you can evaluate and deploy with confidence
+
+&nbsp;

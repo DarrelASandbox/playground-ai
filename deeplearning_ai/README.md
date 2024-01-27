@@ -13,4 +13,10 @@ pip install -r deeplearning_ai/requirements2.txt
 conda create --name gr -c conda-forge gradio
 conda activate gr
 pip install -r deeplearning_ai/requirements3.txt
+
+
+# W&B
+conda create --name wb -c conda-forge wandb pytorch torchvision
+conda activate wb
+pip install -r deeplearning_ai/requirements4.txt
 ```
