@@ -10,6 +10,9 @@
 
 # Introduction
 
+- [WANDB](https://wandb.ai/home)
+  - Sign up for API Key: `wandb login`
+
 # **Using Weights & Biases Tools**
 
 - Instrument W&B in an ML training pipeline
@@ -46,5 +49,31 @@
 - Integrate quickly, track & version automatically
 - Visualize your data and uncover critical insights
 - Improve performance so you can evaluate and deploy with confidence
+
+&nbsp;
+
+# Training a Diffusion Model
+
+## Tracking progress with W&B
+
+- NN learns to predict noise - really learns the distribution of what is not noise
+- Sample random timestep (noise level) per image to train more stably.
+
+![tracking_progress](diagrams/tracking_progress.png)
+
+- A diffusion model learns how iteratively remove small amounts of noise from an image
+- We use the same code as on the "How Diffusion Models Work" Course
+- Telemetry is very important when it comes to training generative models.
+- For the diffusion training we can:
+  - Keep track of the loss and relevant metrics
+
+![loss_and_relevant_metrics](diagrams/loss_and_relevant_metrics.png)
+
+- For the diffusion training we can:
+  - Keep track of the loss and relevant metrics
+  - Sample images from the model during training
+  - Safely store and version model checkpoints
+
+![model_checkpoints](diagrams/model_checkpoints.png)
 
 &nbsp;
