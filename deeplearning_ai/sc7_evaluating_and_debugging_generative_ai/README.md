@@ -77,3 +77,29 @@
 ![model_checkpoints](diagrams/model_checkpoints.png)
 
 &nbsp;
+
+# Evaluating Diffusion Models
+
+## Comparing model outputs
+
+### Managing Models - Model Registry
+
+- A central system of record for your models
+  - Publish production-ready models
+  - Move model versions through the lifecycle from staging to production
+  - Collaborate on models across teams
+  - Audit model lineage across training, evaluation and production
+  - Automation downstream actions
+
+### Visualizing Samples - W&B Tables
+
+- Log, query, and analyze tabular data including rich media: images, videos, molecules, etc.
+- Compare changes precisely across models,
+
+```py
+table = wandb.Table(columns-[`col1`, ...])
+table.add_data(...)
+wandb.log({`predictions`: table})
+```
+
+&nbsp;
