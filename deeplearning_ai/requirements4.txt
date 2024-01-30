@@ -2,3 +2,6 @@ ipykernel
 tqdm
 ipywidgets
 matplotlib
+openai
+tenacity
+python-dotenv

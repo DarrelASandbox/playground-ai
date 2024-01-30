@@ -103,3 +103,46 @@ wandb.log({`predictions`: table})
 ```
 
 &nbsp;
+
+# Evaluating LLMs
+
+1. Using APIs with Tables
+2. Tracking LLM chain spans with Tracer
+3. Tracking Langchain Agents
+
+![calling_openai_apis](diagrams/calling_openai_apis.png)
+
+## Tracking LLM Chain Spans With Tracer
+
+1. Pick a virtual world (Trace World Picker)
+
+- input
+- output
+- start time
+- end time result
+- status
+
+2. Generate description (Trace OpenAI)
+
+- input
+- output
+- start time
+- end time result
+- status
+
+## Tracking Langchain Agent
+
+- ReAct Agent: looping through reasoning (what should I do), Actions (using tools), Observations (what have I learned)
+- **WorldPicker**: pick a virtual game world for your character or item naming
+- **NameValidator**: validate if the name is properly generated
+- **LLM**: ChatOpenAI()
+
+```py
+# enable wandb tracing
+os.environ["LANGCHAIN_WANDB_TRACING"] = "true"
+
+# run langchain agent
+agent.run("Find a virtual game world for me and imagine the name of a hero in that world")
+```
+
+&nbsp;
