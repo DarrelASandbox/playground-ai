@@ -146,3 +146,19 @@ agent.run("Find a virtual game world for me and imagine the name of a hero in th
 ```
 
 &nbsp;
+
+# Fine-tuning LLMs
+
+## Training from scratch
+
+1. Long & expensive training runs
+2. Expensive & difficult evaluations
+3. Monitoring is critical
+4. Ability to restore training from a checkpoint
+
+## Fine-tuning
+
+1. Efficient methods being developed
+2. Expensive & difficult evaluations
+
+&nbsp;
