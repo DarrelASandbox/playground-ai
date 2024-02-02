@@ -18,4 +18,9 @@ pip install -r deeplearning_ai/requirements3.txt
 conda create --name wb -c conda-forge wandb pytorch torchvision datasets
 conda activate wb
 pip install -r deeplearning_ai/requirements4.txt
+
+# Semantic Search
+conda create --name sc python=3.8
+conda activate sc
+pip install -r deeplearning_ai/requirements5.txt
 ```

@@ -19,3 +19,28 @@
 - **Search-Powered LLMs**: Large Language Models (LLMs) enhanced with search capabilities, especially through dense retrieval, exhibit vastly improved question-answering capabilities. They first search for and retrieve relevant documents based on semantic understanding and then generate answers from this retrieved information, leveraging the depth and accuracy of the search results.
 
 &nbsp;
+
+# Keyword Search
+
+- Weaviate is an open source database. It has keyword search capabilities, but also vector search capabilities that rely on language models.
+- **Query**: What color is the grass?
+
+|                Responses                | Number of words in common |
+| :-------------------------------------: | :-----------------------: |
+|        Tomorrow **is** Saturday         |             1             |
+|         **The grass is** green          |             3             |
+| **The** capital of Canada **is** Ottawa |             2             |
+|         **The** sky **is** blue         |             2             |
+|         A whale **is** a mammal         |             1             |
+
+![search_at_a_high_level](diagrams/search_at_a_high_level.png)
+
+![keyword_search_internals](diagrams/keyword_search_internals.png)
+
+![limitation_of_keyword_matching](diagrams/limitation_of_keyword_matching.png)
+
+- Language models can improve both search stages
+
+![improve_both_search_stages](diagrams/improve_both_search_stages.png)
+
+&nbsp;
