@@ -44,3 +44,15 @@
 ![improve_both_search_stages](diagrams/improve_both_search_stages.png)
 
 &nbsp;
+
+# Embeddings
+
+- The Cohere library is an extensive library of functions that use large language models and they can be called via API calls.
+
+![embeddings](diagrams/embeddings.png)
+
+![word_embeddings](diagrams/word_embeddings.png)
+
+![text_embeddings](diagrams/text_embeddings.png)
+
+&nbsp;

@@ -2,3 +2,6 @@ ipykernel
 python-dotenv
 cohere
 weaviate-client
+umap-learn
+altair
+datasets
