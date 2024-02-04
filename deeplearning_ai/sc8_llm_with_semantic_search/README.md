@@ -56,3 +56,25 @@
 ![text_embeddings](diagrams/text_embeddings.png)
 
 &nbsp;
+
+# Dense Retrieval
+
+![dense_retrieval](diagrams/dense_retrieval.png)
+
+- **Part 1**: Consume a vector database
+- **Part 2**: Build a vector search database
+
+![ann_vector_search_vs_vector_databases](diagrams/ann_vector_search_vs_vector_databases.png)
+
+- [Pretrained Transformers for Text Ranking: BERT and Beyond](https://arxiv.org/abs/2010.06467)
+
+![hybrid_search_keyword_vector](diagrams/hybrid_search_keyword_vector.png)
+
+- Dense retrieval and vector search technologies, such as Annoy (Approximate Nearest Neighbor) developed by Spotify, are essential in efficiently locating the nearest neighbors to a search query through the use of highly optimized algorithms for approximate nearest neighbor searches.
+- This contrasts with vector databases, which offer a broader variety of options including Weaviate, Pinecone, and extensions for PostgreSQL, allowing for the storage and retrieval of text alongside vectors, making them more feature-rich.
+- Unlike the simpler setup and vector-only storage approach of libraries like Annoy, vector databases facilitate easier updates to records without needing to rebuild indexes and support advanced querying capabilities, such as filtering by language.
+- These technologies are not meant to replace keyword search but to complement it in a hybrid search strategy, combining both keyword and vector search to enhance document scoring and result relevance.
+- Incorporating additional signals, like Google's PageRank, into this process further refines search results, demonstrating the multifaceted approach to modern search engine optimization.
+- The forthcoming lesson will explore the role of re-ranking in improving search relevance and ranking accuracy.
+
+&nbsp;
