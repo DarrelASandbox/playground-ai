@@ -78,3 +78,19 @@
 - The forthcoming lesson will explore the role of re-ranking in improving search relevance and ranking accuracy.
 
 &nbsp;
+
+# ReRank
+
+![dense_retrieval_is_also_not_perfect](diagrams/dense_retrieval_is_also_not_perfect.png)
+
+![rerank](diagrams/rerank.png)
+
+![rerank_is_trained_on](diagrams/rerank_is_trained_on.png)
+
+## Evaluating Search Systems
+
+- Mean Average Precision (MAP)
+- Mean Reciprocal Rank (MRR)
+- Normalized Discounted Cumulative Gain (NDCG)
+
+&nbsp;
