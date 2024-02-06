@@ -94,3 +94,20 @@
 - Normalized Discounted Cumulative Gain (NDCG)
 
 &nbsp;
+
+# Generative Search
+
+![search](diagrams/search.png)
+
+- Retrieval can help LLMs with:
+  - Factual information
+  - Private information
+  - Updated information
+
+![where_is_the_information_stored](diagrams/where_is_the_information_stored.png)
+
+![search_can_add_some_context](diagrams/search_can_add_some_context.png)
+
+![generating_answer](diagrams/generating_answer.png)
+
+&nbsp;
